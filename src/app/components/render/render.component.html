@@ -1,0 +1,44 @@
+<div class="estilo-if">
+    <div class="box" [ngStyle]="{'border': '2px solid '+corBackground}">
+        <h2>Animais:</h2><br>
+        <ul *ngFor="let animal of animals">
+            <li *ngIf="animal.type === 'Dog'">
+                Nome: {{animal.name}} - <span [ngStyle]="{'color': 'green'}">({{animal.type}})</span>
+            </li>
+            <li *ngIf="animal.type === 'Cat'">
+                Nome: {{animal.name}} - <span [ngStyle]="{'color': 'red'}">({{animal.type}})</span>
+            </li>
+            <li *ngIf="animal.type === 'Horse'">
+                Nome: {{animal.name}} - <span [ngStyle]="{'color': 'purple'}">({{animal.type}})</span>
+            </li>
+            
+            <button (click)="showAges(animal)">Mostrar idade de {{animal.name}}</button>
+            <button class="botaoExcluir"(click)="removeAnimal(animal)">Excluir animal</button>
+        </ul>
+        
+        <h3 class="idade">
+            {{idade}}
+        </h3>
+        <br>
+        <h3>
+            Soma das idades: {{soma}}
+        </h3>
+    </div>
+    <div class="box">
+        <h2>Pessoas:</h2>
+        <ul *ngFor="let pessoa of pessoas">
+            <li *ngIf="pessoa.situacao === 'Reprovado'">
+                Id: {{pessoa.id}} -   
+                Data: {{pessoa.data}} - 
+                Situacao: <span [ngStyle]="{'color': 'red'}">{{pessoa.situacao}}</span> - 
+                Motivo: {{pessoa.motivo}}
+            </li>
+            <li *ngIf="pessoa.situacao === 'Aprovado'">
+                Id: {{pessoa.id}} -   
+                Data: {{pessoa.data}} - 
+                Situacao: <span [ngStyle]="{'color': 'green'}">{{pessoa.situacao}}</span> - 
+                Motivo: {{pessoa.motivo}}
+            </li>
+        </ul>
+    </div>
+</div>

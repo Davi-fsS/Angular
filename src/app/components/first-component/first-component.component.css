@@ -1,3 +1,20 @@
 h3{
     color:red;
 }
+
+div h3{
+    color:black
+}
+
+.infos-importantes{
+    background-color: lightgray;
+    padding:20px;
+    width: 30%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.infos-importantes ul{
+    list-style: none;
+}

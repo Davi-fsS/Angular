@@ -2,5 +2,13 @@
   <h1>Hello World Angular!</h1>
   <br>
   <h2>Abaixo, temos a importação de nosso primeiro componente: </h2>
-  <app-first-component></app-first-component>
-</div>
+  <app-first-component></app-first-component> 
+  <app-parent-data [name]="userName" [dados]="userData" [titulo]="title" [info]="informacao" [infoFilho]="infoPai" [date]="data"></app-parent-data>           <!-- SINTAXE UTILIZADA: [(nome a ser usado no filho)]="(nome declarado no pai)" -->
+  <app-directives></app-directives>
+  <app-if-render></app-if-render>
+  <app-eventos></app-eventos>
+  <app-emitter></app-emitter>
+  <app-render></app-render>
+  <app-pipes></app-pipes>
+  <app-two-way-data-bind></app-two-way-data-bind>
+</div> 

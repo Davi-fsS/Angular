@@ -1,0 +1,7 @@
+<div class="estilo-if">                                                            
+    <h1>O número é: {{myNumber}}</h1>
+    <span>Se for par, ele aparecerá aqui em verde:</span><span [ngStyle]="{'color': cor, 'font-weight':pesoCor}">{{myNumber}}</span>
+    <br>
+    <h1 [ngStyle]="{'color':corNome,'font-weight':pesoCorNome}">O nome é: {{nome}}</h1>
+    <app-change-number (changeNumber)="onChangeNumber()" (changeNames)="onChangeNames()"></app-change-number>
+</div>

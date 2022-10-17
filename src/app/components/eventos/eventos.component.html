@@ -1,0 +1,7 @@
+<div class="estilo-if">
+    <button (click)="showMessage()" [ngStyle]="{'background-color': corBotao}" >Clique em mim para {{mensagem}}</button>
+    <div>
+        <p *ngIf="show" [ngStyle]="{'color': corText, 'font-weight':'400'}">{{resposta}}</p>
+    </div>
+
+</div>

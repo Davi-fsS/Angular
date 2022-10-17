@@ -1,0 +1,6 @@
+<div class="estilo-if">
+    <h2>{{ "Algum texto aqui!" | uppercase}}</h2>
+    <h2>{{ "ola tudo bem com voce" | titlecase}}</h2>
+    <h2>Horas: <span [ngStyle]="{'color':'red','font-size':20+'px','text-decoration':'underline'}">{{dateObj | date: dateType}}</span></h2>
+    <br><button (click)="changeDate()">Mudar formato horario</button>
+</div>
