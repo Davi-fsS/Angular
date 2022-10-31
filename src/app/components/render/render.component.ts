@@ -39,6 +39,10 @@ export class RenderComponent implements OnInit {
   removeAnimal(animal : Animal){
     this.animals = this.listService.remove(this.animals,animal)
   }
+  
+  removePessoa(pessoa : Pessoa){  
+    this.pessoas = this.listService.removeP(this.pessoas,pessoa)
+  }
 
   mudaBorda(): void{
     let a = this.listService.changeBord(this.animals)

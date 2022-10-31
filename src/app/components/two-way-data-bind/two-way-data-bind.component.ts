@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayDataBindComponent implements OnInit {
 
+  nomeDigitado!:string
+  emailDigitado!:string
+  cpfDigitado!:string
+  buttonStatus : boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  handleStatus(){
+    this.buttonStatus = true
   }
 
 }

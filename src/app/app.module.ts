@@ -11,6 +11,7 @@ import { EmitterComponent } from './components/emitter/emitter.component';
 import { ChangeNumberComponent } from './components/change-number/change-number.component';
 import { RenderComponent } from './components/render/render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { FormsModule } from '@angular/forms';
 import { TwoWayDataBindComponent } from './components/two-way-data-bind/two-way-data-bind.component';
 
 @NgModule({
@@ -28,7 +29,8 @@ import { TwoWayDataBindComponent } from './components/two-way-data-bind/two-way-
     TwoWayDataBindComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,30 @@
 <div class="estilo-if">
-    <h3>Assistir essa aula depois!</h3>
-    <a href="https://www.youtube.com/watch?v=LYpI4iRRoU4&list=PLnDvRpP8Bnex2GQEN0768_AxZg_RaIGmw&index=15">Link da aula</a>
+    <h1>Two-way data bind</h1>
+    <form>
+        <input
+            type="text"
+            [(ngModel)]="nomeDigitado"
+            name="name"
+            placeholder="Nome"
+        >
+        <input
+            type="email"
+            [(ngModel)]="emailDigitado"
+            name="email"
+            placeholder="Email"
+        >
+        <input
+            type="number"
+            [(ngModel)]="cpfDigitado"
+            name="cpf"
+            placeholder="CPF"
+        >
+        <button (click)="handleStatus()">Criar perfil</button>
+        
+    </form>
+    <section *ngIf="buttonStatus">
+        <h2 style="color:red">{{nomeDigitado | titlecase}}</h2>
+        <h3>{{emailDigitado}}</h3>
+        <h3>{{cpfDigitado}}</h3>
+    </section>
 </div>

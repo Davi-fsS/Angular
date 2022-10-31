@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Animal } from '../Animal';
+import { Pessoa } from '../Pessoa';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,10 @@ export class ListService {
 
   remove(animals: Animal[], animal: Animal){
     return animals.filter((a)=>animal.name !== a.name);
+  }
+
+  removeP(pessoas: Pessoa[], pessoa:Pessoa){
+    return pessoas.filter((a)=>pessoa.situacao !== a.situacao)
   }
 
   changeBord(animals : Animal[]){
@@ -28,5 +33,13 @@ export class ListService {
     }
     a.push(countDog, countCat, countHorse)
     return a
+  }
+
+  changeStatus(pessoas : Pessoa[]){
+    return pessoas.map(a => {
+      if(a.situacao === "Reprovado"){
+        a.situacao = "Aprovado"
+      }
+    });
   }
 }
